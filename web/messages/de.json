@@ -1,0 +1,22 @@
+{
+  "common": {
+    "api": "API",
+    "web": "Webanwendung",
+    "statusChecking": "Wird geprüft…",
+    "statusDegraded": "Eingeschränkt",
+    "statusOk": "Betriebsbereit",
+    "statusUnavailable": "Nicht verfügbar",
+    "notFoundTitle": "Seite nicht gefunden",
+    "notFoundDescription": "Die angeforderte Seite existiert nicht."
+  },
+  "home": {
+    "title": "Mehrsprachige Veranstaltungswebsites",
+    "description": "Erstellen Sie eine Veranstaltung einmal und veröffentlichen Sie sie in jeder aktivierten Sprache.",
+    "statusHeading": "Dienststatus",
+    "localeLabel": "Sprache",
+    "directionLabel": "Schreibrichtung"
+  },
+  "event": {
+    "placeholder": "Die veröffentlichte Veranstaltungswebsite wird hier dargestellt."
+  }
+}

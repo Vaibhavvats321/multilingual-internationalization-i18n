@@ -1,0 +1,40 @@
+# ---------------------------------------------------------------------------
+# Local development infrastructure.
+#
+# Scope (Phase 0): PostgreSQL only. The API and web application run natively
+# (`uv run ...` / `pnpm dev`) so that the developer loop stays fast and the
+# toolchain matches CI exactly.
+#
+# Application container images are deferred until Docker is available and a
+# deployment target is selected. See docs/decisions/0007-toolchain.md.
+#
+#   docker compose up -d db
+# ---------------------------------------------------------------------------
+
+name: multilingua
+
+services:
+  db:
+    image: postgres:18-alpine
+    container_name: multilingua-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: multilingua
+      POSTGRES_USER: multilingua
+      POSTGRES_PASSWORD: multilingua
+      # Deterministic collation so ordering does not depend on the host locale.
+      POSTGRES_INITDB_ARGS: "--locale=C --encoding=UTF8"
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U multilingua -d multilingua"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+
+volumes:
+  db-data:
+    name: multilingua-db-data

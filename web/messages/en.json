@@ -1,0 +1,22 @@
+{
+  "common": {
+    "api": "API",
+    "web": "Web application",
+    "statusChecking": "Checking…",
+    "statusDegraded": "Degraded",
+    "statusOk": "Operational",
+    "statusUnavailable": "Unavailable",
+    "notFoundTitle": "Page not found",
+    "notFoundDescription": "The page you requested does not exist."
+  },
+  "home": {
+    "title": "Multilingual event websites",
+    "description": "Create an event once and publish it in every language you enable.",
+    "statusHeading": "Service status",
+    "localeLabel": "Language",
+    "directionLabel": "Writing direction"
+  },
+  "event": {
+    "placeholder": "The published event website will be rendered here."
+  }
+}

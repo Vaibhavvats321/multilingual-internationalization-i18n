@@ -1,0 +1,22 @@
+{
+  "common": {
+    "api": "واجهة برمجة التطبيقات",
+    "web": "تطبيق الويب",
+    "statusChecking": "جارٍ التحقق…",
+    "statusDegraded": "أداء متدهور",
+    "statusOk": "يعمل",
+    "statusUnavailable": "غير متاح",
+    "notFoundTitle": "الصفحة غير موجودة",
+    "notFoundDescription": "الصفحة التي طلبتها غير موجودة."
+  },
+  "home": {
+    "title": "مواقع فعاليات متعددة اللغات",
+    "description": "أنشئ فعالية مرة واحدة وانشرها بكل اللغات التي تفعّلها.",
+    "statusHeading": "حالة الخدمات",
+    "localeLabel": "اللغة",
+    "directionLabel": "اتجاه الكتابة"
+  },
+  "event": {
+    "placeholder": "سيتم عرض موقع الفعالية المنشور هنا."
+  }
+}

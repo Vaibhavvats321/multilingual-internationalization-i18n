@@ -1,0 +1,33 @@
+@import 'tailwindcss';
+
+/*
+ * Design tokens. Event themes are stored in the database and validated by the
+ * API; these are the platform defaults that every event inherits from.
+ */
+@theme {
+  --color-surface: oklch(99% 0 0);
+  --color-surface-muted: oklch(96% 0 0);
+  --color-ink: oklch(21% 0 0);
+}
+
+/*
+ * Direction agnostic defaults. Logical properties (inline-start / inline-end)
+ * are used throughout the code base so the same markup renders correctly for
+ * both LTR and RTL. Never use physical `left` / `right` for layout.
+ */
+@layer base {
+  html {
+    color-scheme: light;
+  }
+
+  body {
+    background-color: var(--color-surface);
+    color: var(--color-ink);
+    font-family:
+      ui-sans-serif,
+      system-ui,
+      -apple-system,
+      'Segoe UI',
+      sans-serif;
+  }
+}
